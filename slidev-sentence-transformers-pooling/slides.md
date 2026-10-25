@@ -149,7 +149,7 @@ class Pooling(nn.Module):
 
 ---
 theme: dracula
-transition: slide-left # https://sli.dev/guide/animations#builtin-transitions aqui hi han mes transicions
+transition: slide-left 
 ---
 
 # Mètode forward
@@ -172,7 +172,7 @@ def forward(self, token_embeddings):
 
 ---
 theme: dracula
-transition: slide-left # https://sli.dev/guide/animations#builtin-transitions aqui hi han mes transicions
+transition: slide-left 
 ---
 
 # PyTorch Dimensions
@@ -194,7 +194,7 @@ Shape: (32, 50, 768)
 
 ---
 theme: dracula
-transition: slide-right # https://sli.dev/guide/animations#builtin-transitions aqui hi han mes transicions
+transition: slide-right 
 ---
 
 # Semantic Search
@@ -246,6 +246,7 @@ transition: slide-right
 ✅ Connexió amb la carrera
 
 ---
+layout: cover <!-- https://sli.dev/guide/layout hi han layouts per estructura ns si es lo que buscaves aqui por si sirve xd -->
 theme: dracula
 transition: slide-right
 ---
@@ -256,7 +257,7 @@ Preguntes?
 
 ---
 theme: dracula
-transition: slide-right # https://sli.dev/guide/animations#builtin-transitions aqui hi han mes transicions
+transition: slide-right 
 ---
 
 # Recursos
