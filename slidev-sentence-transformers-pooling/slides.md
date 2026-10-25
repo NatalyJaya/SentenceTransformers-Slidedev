@@ -1,7 +1,7 @@
 ---
 theme: dracula
 title: Sentence Transformers
-transition: slide-left # https://sli.dev/guide/animations#builtin-transitions aqui hi han mes transicions
+transition: slide-left 
 ---
 
 # Sentence Transformers
