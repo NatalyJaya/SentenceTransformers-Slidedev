@@ -1,6 +1,7 @@
 ---
 theme: dracula
 title: Sentence Transformers
+transition: slide-left # https://sli.dev/guide/animations#builtin-transitions aqui hi han mes transicions
 ---
 
 # Sentence Transformers
@@ -10,7 +11,9 @@ title: Sentence Transformers
 </div>
 
 ---
-
+theme: dracula
+transition: slide-right s
+---
 # Qué és Sentence Transformers?
 
 Una llibreria Python que converteix **frases en vectors numèrics**.
@@ -39,7 +42,9 @@ Resultat:
 3. "Els cotxes negres" ✗
 
 ---
-
+theme: dracula
+transition: slide-right # la estrictura aquesta de ---- te ajuda a dir com vols que siguie la estructura de la slide, llavors ja va el contingut 
+---
 # La pregunta de partida
 
 ## Com passa **pooling** de tokens a vector?
@@ -59,7 +64,9 @@ Token 2: [0.4, 0.5, 0.6, ..., 0.8]  (768 números)
 Per què? Necessites 1 vector per comparar frases.
 
 ---
-
+theme: dracula
+transition: slide-right # https://sli.dev/guide/animations#builtin-transitions aqui hi han mes transicions
+---
 # Qué és Pooling?
 
 **El problema:**
@@ -83,7 +90,9 @@ Token 2: [0.5,  0.6,  0.7]
 3. **CLS Pooling**: primer token
 
 ---
-
+theme: dracula
+transition: slide-right # https://sli.dev/guide/animations#builtin-transitions aqui hi han mes transicions
+---
 # Mean Pooling Visual
 
 <pre style="font-family: monospace; background: #1e1e1e; padding: 20px; border-radius: 8px; color: #a8ff60;">
@@ -103,7 +112,9 @@ Operació: (0.1+0.5)/2 = 0.3
 - Representa la mitjana
 
 ---
-
+theme: dracula
+transition: slide-right # https://sli.dev/guide/animations#builtin-transitions aqui hi han mes transicions
+---
 # Codi: Classe Pooling
 
 <pre style="font-family: monospace; background: #1e1e1e; padding: 20px; border-radius: 8px; color: #a8ff60; font-size: 14px;">
@@ -131,6 +142,9 @@ class Pooling(nn.Module):
 </pre>
 
 ---
+theme: dracula
+transition: slide-right # https://sli.dev/guide/animations#builtin-transitions aqui hi han mes transicions
+---
 
 # Mètode forward
 
@@ -151,6 +165,9 @@ def forward(self, token_embeddings):
 - Resultat: **1 vector per frase**
 
 ---
+theme: dracula
+transition: slide-right # https://sli.dev/guide/animations#builtin-transitions aqui hi han mes transicions
+---
 
 # PyTorch Dimensions
 
@@ -170,6 +187,9 @@ Shape: (32, 50, 768)
 </pre>
 
 ---
+theme: dracula
+transition: slide-right # https://sli.dev/guide/animations#builtin-transitions aqui hi han mes transicions
+---
 
 # Semantic Search
 
@@ -188,6 +208,9 @@ Shape: (32, 50, 768)
 **Resultat:** Pooling permet comparar vectors
 
 ---
+theme: dracula
+transition: slide-right # https://sli.dev/guide/animations#builtin-transitions aqui hi han mes transicions
+---
 
 # Connexió amb la carrera
 
@@ -199,6 +222,9 @@ Shape: (32, 50, 768)
 | Derivades | Càlcul        | .mean() diferenciable |
 | OOP       | Programació   | Composició            |
 
+---
+theme: dracula
+transition: slide-right # https://sli.dev/guide/animations#builtin-transitions aqui hi han mes transicions
 ---
 
 # Conclusions
@@ -214,11 +240,17 @@ Shape: (32, 50, 768)
 ✅ Connexió amb la carrera
 
 ---
+theme: dracula
+transition: slide-right # https://sli.dev/guide/animations#builtin-transitions aqui hi han mes transicions
+---
 
 # Gràcies!
 
 Preguntes?
 
+---
+theme: dracula
+transition: slide-right # https://sli.dev/guide/animations#builtin-transitions aqui hi han mes transicions
 ---
 
 # Recursos
