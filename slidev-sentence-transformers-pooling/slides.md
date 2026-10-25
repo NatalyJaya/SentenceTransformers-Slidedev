@@ -12,7 +12,7 @@ transition: slide-left # https://sli.dev/guide/animations#builtin-transitions aq
 
 ---
 theme: dracula
-transition: slide-right s
+transition: slide-left
 ---
 # Qué és Sentence Transformers?
 
@@ -20,14 +20,14 @@ Una llibreria Python que converteix **frases en vectors numèrics**.
 
 **Casos d'ús:**
 
-- 🔍 Semantic Search
-- 📦 Computing Embeddings
-- 🏆 Reranking
+- Semantic Search
+- Computing Embeddings
+- Reranking
 
 **El problema:**
 
-- ❌ Keyword search: paraules exactes
-- ✅ Semantic search: pel significat
+- Keyword search: paraules exactes
+- Semantic search: pel significat
 
 ::right::
 
@@ -43,8 +43,10 @@ Resultat:
 
 ---
 theme: dracula
-transition: slide-right # la estrictura aquesta de ---- te ajuda a dir com vols que siguie la estructura de la slide, llavors ja va el contingut 
+transition: slide-left # la estrictura aquesta de
 ---
+
+<!-- te ajuda a dir com vols que siguie la estructura de la slide, llavors ja va el contingut -->  
 # La pregunta de partida
 
 ## Com passa **pooling** de tokens a vector?
@@ -65,7 +67,7 @@ Per què? Necessites 1 vector per comparar frases.
 
 ---
 theme: dracula
-transition: slide-right # https://sli.dev/guide/animations#builtin-transitions aqui hi han mes transicions
+transition: slide-left # https://sli.dev/guide/animations#builtin-transitions aqui hi han mes transicions
 ---
 # Qué és Pooling?
 
@@ -91,7 +93,7 @@ Token 2: [0.5,  0.6,  0.7]
 
 ---
 theme: dracula
-transition: slide-right # https://sli.dev/guide/animations#builtin-transitions aqui hi han mes transicions
+transition: slide-left # https://sli.dev/guide/animations#builtin-transitions aqui hi han mes transicions
 ---
 # Mean Pooling Visual
 
@@ -113,7 +115,7 @@ Operació: (0.1+0.5)/2 = 0.3
 
 ---
 theme: dracula
-transition: slide-right # https://sli.dev/guide/animations#builtin-transitions aqui hi han mes transicions
+transition: slide-left # https://sli.dev/guide/animations#builtin-transitions aqui hi han mes transicions
 ---
 # Codi: Classe Pooling
 
@@ -143,7 +145,7 @@ class Pooling(nn.Module):
 
 ---
 theme: dracula
-transition: slide-right # https://sli.dev/guide/animations#builtin-transitions aqui hi han mes transicions
+transition: slide-left # https://sli.dev/guide/animations#builtin-transitions aqui hi han mes transicions
 ---
 
 # Mètode forward
@@ -166,7 +168,7 @@ def forward(self, token_embeddings):
 
 ---
 theme: dracula
-transition: slide-right # https://sli.dev/guide/animations#builtin-transitions aqui hi han mes transicions
+transition: slide-left # https://sli.dev/guide/animations#builtin-transitions aqui hi han mes transicions
 ---
 
 # PyTorch Dimensions
