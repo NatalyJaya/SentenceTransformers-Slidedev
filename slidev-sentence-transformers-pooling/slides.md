@@ -120,8 +120,8 @@ transition: slide-left <!-- https://sli.dev/guide/animations#builtin-transitions
 ---
 
 # Codi: Classe Pooling
-
-```python {all|1-2|4-11|13-17|18-23}{lines:true,maxHeight:'420px'}
+<!-- dentro de las " | | |" pongo las linias que van a ser subralladas i luego la otra estructura ya es etetica de poner le codigo en python y asi evito poner el tag <pre> -->  
+```python {all|1-2|4-11|13-17|18-23}{lines:true,maxHeight:'420px'} 
 class Pooling(nn.Module):
     """Pooling layer que fusiona tokens en 1 vector"""
 
