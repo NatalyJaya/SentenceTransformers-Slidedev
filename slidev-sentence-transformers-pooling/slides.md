@@ -115,33 +115,37 @@ Operació: (0.1+0.5)/2 = 0.3
 
 ---
 theme: dracula
-transition: slide-left # https://sli.dev/guide/animations#builtin-transitions aqui hi han mes transicions
+transition: slide-left <!-- https://sli.dev/guide/animations#builtin-transitions
+  aqui hi han mes transicions -->
 ---
+
 # Codi: Classe Pooling
 
-<pre style="font-family: monospace; background: #1e1e1e; padding: 20px; border-radius: 8px; color: #a8ff60; font-size: 14px;">
+```python {all|1-2|4-11|13-17|18-23}{lines:true,maxHeight:'420px'}
 class Pooling(nn.Module):
     """Pooling layer que fusiona tokens en 1 vector"""
-    
-    def __init__(self, word_embedding_dimension: int, 
-                 pooling_mode: str = "mean"):
+
+    def __init__(
+        self,
+        word_embedding_dimension: int,
+        pooling_mode: str = "mean",
+    ):
         super().__init__()
         self.word_embedding_dimension = word_embedding_dimension
         self.pooling_mode = pooling_mode
-    
+
     def forward(self, token_embeddings):
         """
         Entrada: (batch, tokens, 768)
         Sortida: (batch, 768)
         """
-        
         if self.pooling_mode == "mean":
             return token_embeddings.mean(dim=1)
         elif self.pooling_mode == "max":
             return token_embeddings.max(dim=1)[0]
         elif self.pooling_mode == "cls":
             return token_embeddings[:, 0, :]
-</pre>
+```
 
 ---
 theme: dracula
@@ -150,15 +154,15 @@ transition: slide-left # https://sli.dev/guide/animations#builtin-transitions aq
 
 # Mètode forward
 
-<pre style="font-family: monospace; background: #1e1e1e; padding: 20px; border-radius: 8px; color: #a8ff60; font-size: 14px;">
+```python {all|2-3|5-7}{lines:true}
 def forward(self, token_embeddings):
     # Input:  (batch, tokens, 768)
     # Output: (batch, 768)
-    
+
     if self.pooling_mode == "mean":
         return token_embeddings.mean(dim=1)
         # (32, 50, 768) → (32, 768)
-</pre>
+```
 
 **Explicació:**
 
@@ -211,7 +215,7 @@ transition: slide-right # https://sli.dev/guide/animations#builtin-transitions a
 
 ---
 theme: dracula
-transition: slide-right # https://sli.dev/guide/animations#builtin-transitions aqui hi han mes transicions
+transition: slide-right
 ---
 
 # Connexió amb la carrera
@@ -226,7 +230,7 @@ transition: slide-right # https://sli.dev/guide/animations#builtin-transitions a
 
 ---
 theme: dracula
-transition: slide-right # https://sli.dev/guide/animations#builtin-transitions aqui hi han mes transicions
+transition: slide-right
 ---
 
 # Conclusions
@@ -243,7 +247,7 @@ transition: slide-right # https://sli.dev/guide/animations#builtin-transitions a
 
 ---
 theme: dracula
-transition: slide-right # https://sli.dev/guide/animations#builtin-transitions aqui hi han mes transicions
+transition: slide-right
 ---
 
 # Gràcies!
