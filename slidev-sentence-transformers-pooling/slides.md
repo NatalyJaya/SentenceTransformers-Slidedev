@@ -246,7 +246,7 @@ transition: slide-right
 ✅ Connexió amb la carrera
 
 ---
-layout: cover <!-- https://sli.dev/guide/layout hi han layouts per estructura ns si es lo que buscaves aqui por si sirve xd -->
+layout: cover
 theme: dracula
 transition: slide-right
 ---
