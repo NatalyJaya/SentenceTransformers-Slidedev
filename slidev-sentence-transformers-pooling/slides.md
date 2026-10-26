@@ -1,10 +1,12 @@
 ---
 theme: dracula
 title: Sentence Transformers
-transition: slide-left 
+transition: slide-left
 ---
 
 # Sentence Transformers
+
+## Pooling
 
 <div class="absolute bottom-10 right-10 text-sm">
   Toni López Llao
@@ -12,8 +14,16 @@ transition: slide-left
 
 ---
 theme: dracula
-transition: slide-left
+
 ---
+# Transformers
+
+<TransformersDiagram/>
+
+---
+theme: dracula
+---
+
 # Qué és Sentence Transformers?
 
 Una llibreria Python que converteix **frases en vectors numèrics**.
@@ -43,32 +53,20 @@ Resultat:
 
 ---
 theme: dracula
-transition: slide-left # la estrictura aquesta de
 ---
 
-<!-- te ajuda a dir com vols que siguie la estructura de la slide, llavors ja va el contingut -->  
 # La pregunta de partida
 
 ## Com passa **pooling** de tokens a vector?
 
-<pre style="font-family: monospace; background: #1e1e1e; padding: 20px; border-radius: 8px; color: #a8ff60;">
-Frase: "Hola mundo"
-    ↓
-[Transformer]
-    ↓
-Token 1: [0.1, 0.2, 0.3, ..., 0.5]  (768 números)
-Token 2: [0.4, 0.5, 0.6, ..., 0.8]  (768 números)
-    ↓ ¿POOLING?
-    ↓
-[Vector únic que representa la frase]
-</pre>
+<PoolingDiagram/>
 
 Per què? Necessites 1 vector per comparar frases.
 
 ---
 theme: dracula
-transition: slide-left # https://sli.dev/guide/animations#builtin-transitions aqui hi han mes transicions
 ---
+
 # Qué és Pooling?
 
 **El problema:**
@@ -81,9 +79,12 @@ BERT tokenitza i processa
 Token 1: [0.1,  0.2,  0.3]
 Token 2: [0.5,  0.6,  0.7]
 
-❌ Tenim 2 vectors
-✅ Necessitem 1 per comparar frases
+ Tenim 2 vectors
+ Necessitem 1 per comparar frases
 </pre>
+---
+theme: dracula
+---
 
 **Estratègies:**
 
@@ -92,9 +93,7 @@ Token 2: [0.5,  0.6,  0.7]
 3. **CLS Pooling**: primer token
 
 ---
-theme: dracula
-transition: slide-left # https://sli.dev/guide/animations#builtin-transitions aqui hi han mes transicions
----
+
 # Mean Pooling Visual
 
 <pre style="font-family: monospace; background: #1e1e1e; padding: 20px; border-radius: 8px; color: #a8ff60;">
@@ -114,14 +113,12 @@ Operació: (0.1+0.5)/2 = 0.3
 - Representa la mitjana
 
 ---
-theme: dracula
-transition: slide-left <!-- https://sli.dev/guide/animations#builtin-transitions
-  aqui hi han mes transicions -->
----
 
 # Codi: Classe Pooling
-<!-- dentro de las " | | |" pongo las linias que van a ser subralladas i luego la otra estructura ya es etetica de poner le codigo en python y asi evito poner el tag <pre> -->  
-```python {all|1-2|4-11|13-17|18-23}{lines:true,maxHeight:'420px'} 
+
+<!-- dentro de las " | | |" pongo las linias que van a ser subralladas i luego la otra estructura ya es etetica de poner le codigo en python y asi evito poner el tag <pre> -->
+
+```python {all|1-2|4-11|13-17|18-23}{lines:true,maxHeight:'420px'}
 class Pooling(nn.Module):
     """Pooling layer que fusiona tokens en 1 vector"""
 
@@ -148,9 +145,6 @@ class Pooling(nn.Module):
 ```
 
 ---
-theme: dracula
-transition: slide-left 
----
 
 # Mètode forward
 
@@ -171,9 +165,6 @@ def forward(self, token_embeddings):
 - Resultat: **1 vector per frase**
 
 ---
-theme: dracula
-transition: slide-left 
----
 
 # PyTorch Dimensions
 
@@ -193,9 +184,6 @@ Shape: (32, 50, 768)
 </pre>
 
 ---
-theme: dracula
-transition: slide-right 
----
 
 # Semantic Search
 
@@ -214,9 +202,6 @@ transition: slide-right
 **Resultat:** Pooling permet comparar vectors
 
 ---
-theme: dracula
-transition: slide-right
----
 
 # Connexió amb la carrera
 
@@ -228,9 +213,6 @@ transition: slide-right
 | Derivades | Càlcul        | .mean() diferenciable |
 | OOP       | Programació   | Composició            |
 
----
-theme: dracula
-transition: slide-right
 ---
 
 # Conclusions
@@ -246,18 +228,11 @@ transition: slide-right
 ✅ Connexió amb la carrera
 
 ---
-layout: cover
-theme: dracula
-transition: slide-right
----
 
 # Gràcies!
 
 Preguntes?
 
----
-theme: dracula
-transition: slide-right 
 ---
 
 # Recursos
